@@ -48,7 +48,7 @@ export default function Post(props) {
 
                 <div className="post" data-test="post">
                     <div className="topo">
-                        <div classNAme="usuario">
+                        <div className="usuario">
                             <img src={props.fotousuario} alt={props.usuario} />
                             {props.usuario}
                         </div>
@@ -61,11 +61,12 @@ export default function Post(props) {
                     </div>
                     <div className="fundo">
                         <div className="acoes">
-                            <div>
-                                <ion-icon data-test="like-post" onClick={curtePost} name={!curtido ? "heart-outline" : "heart"} className={postLiked}></ion-icon>
-                                <ion-icon name="chatbubble-outline"></ion-icon>
-                                <ion-icon name="paper-plane-outline"></ion-icon>
+                            <div className="flex">
+                                <div className={postLiked}> <ion-icon data-test="like-post" onClick={curtePost} name={!curtido ? "heart-outline" : "heart"}></ion-icon> </div>
+                                <div> <ion-icon name="chatbubble-outline"></ion-icon> </div> 
+                                <div> <ion-icon name="paper-plane-outline"></ion-icon> </div>
                             </div>
+                            
                             <div>
                                 <ion-icon data-test="save-post" onClick={salvaPost} name={!salvo ? "bookmark-outline" : "bookmark"}></ion-icon>
                             </div>
